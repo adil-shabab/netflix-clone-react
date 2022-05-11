@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.row{
+    max-width: 100%;
+    overflow-x: scroll;
+    overflow-y: visible;
+}
+.poster{
+    object-fit: contain;
+    max-height: 100px;
+    width: 100%;
+    transition: 0.5s ease;
+}
+.poster:hover{
+    transform: scale(1.15);
+}
+.row_poster{
+    display: flex;
+    width: 100%;
+}
+.poster::-webkit-scrollbar,
+.row_poster::-webkit-scrollbar,
+.row::-webkit-scrollbar
+{
+    display: none;
+}
