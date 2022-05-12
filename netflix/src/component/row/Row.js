@@ -2,12 +2,13 @@ import React, { useState, useEffect } from "react";
 import instance from "../../axios";
 import './Row.css'
 import YouTube from 'react-youtube'
+import movieTrailer from 'movie-trailer'
 
 const opts={
   height: "390",
   width: "100%",
   playerVars: {
-    autoplay: 1
+    autoplay: 0
   }
 }
 
@@ -34,8 +35,10 @@ function Row({ title, fetchUrl, isLargeRow }) {
     if(trailerUrl) {
       setTrailerUrl("")
     }else{
-      movieTrailer(movie.name || "").then((url)=>{
-
+      movieTrailer(movie.title || "").then((url)=>{
+        const urlParams = new URLSearchParams(new URL (url).search)
+        setTrailerUrl(urlParams.get("v"))
+        console.log(urlParams)
       }).catch((error)=> console.log(error))
     }
   }
@@ -60,7 +63,9 @@ function Row({ title, fetchUrl, isLargeRow }) {
         })}
       </div>
 
-      {trailerUrl && <YouTube videoId="XtMThy8QKqU" opts={opts}/>}
+      <div className="w-100">
+        {trailerUrl && <YouTube videoId={trailerUrl} opts={opts}/>}
+      </div>
     </div>
   );
 }
