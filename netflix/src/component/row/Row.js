@@ -1,10 +1,21 @@
 import React, { useState, useEffect } from "react";
 import instance from "../../axios";
 import './Row.css'
+import YouTube from 'react-youtube'
+
+const opts={
+  height: "390",
+  width: "100%",
+  playerVars: {
+    autoplay: 1
+  }
+}
+
 const imageBaseUrl = "https://image.tmdb.org/t/p/original";
 
 function Row({ title, fetchUrl, isLargeRow }) {
   const [movies, setMovies] = useState([]);
+  const [trailerUrl, setTrailerUrl] = useState("");
 
   // A snippet of code which runs based on a specific condition
   // if [], run once when row loads, and dont run again
@@ -34,6 +45,8 @@ function Row({ title, fetchUrl, isLargeRow }) {
           );
         })}
       </div>
+
+      {trailerUrl && <YouTube videoId="XtMThy8QKqU" opts={opts}/>}
     </div>
   );
 }
