@@ -3,7 +3,7 @@ import instance from '../../../axios';
 import requests from '../../../requests';
 
 
-baseUrl: 'https://api.themoviedb.org/3'
+const imageUrl = 'https://image.tmdb.org/t/p/original'
 
 function Banner() {
     
@@ -18,7 +18,7 @@ function Banner() {
     console.log(movie)
   return (
     <header className='banner'
-    style={{backgroundImage: `url(${baseUrl})`}}
+    style={{height: "100vh",width: "100%",backgroundImage: `url(${imageUrl}${movie.backdrop_path})`, backgroundPosition: "center", backgroundSize: "cover"}}
     >
         <div className="banner-content">
             <h1></h1>
