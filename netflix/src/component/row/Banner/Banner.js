@@ -1,7 +1,7 @@
 import React,{useState, useEffect} from 'react'
 import instance from '../../../axios';
 import requests from '../../../requests';
-
+import './Banner.css'
 
 const imageUrl = 'https://image.tmdb.org/t/p/original'
 
@@ -16,13 +16,32 @@ function Banner() {
         fetchData()
     }, []);
     console.log(movie)
+
+    
+    function truncate(str, n) {
+        return str.length > n ? str.substr(0, n-1) + "..." : str
+    }
+
+
   return (
     <header className='banner'
     style={{height: "100vh",width: "100%",backgroundImage: `url(${imageUrl}${movie.backdrop_path})`, backgroundPosition: "center", backgroundSize: "cover"}}
     >
         <div className="banner-content">
-            <h1></h1>
+            <h1>{movie.title || movie.name ||movie.Original_name}</h1>
+            <div className="banner-buttons">
+                <button className="button">Play</button>
+                <button className="button">My List</button>
+            </div>
+
+            <h2 className="banner-description">
+                {truncate(movie.overview, 150)}
+            </h2>
         </div>
+
+        
+
+
     </header>
   )
 }
