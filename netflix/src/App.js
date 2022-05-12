@@ -11,7 +11,7 @@ import requests from './requests';
 function App() {
 
   return (
-    <div className='app container'>
+    <div className='app'>
       <Navbar/>
       <div>
         <Banner/>

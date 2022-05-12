@@ -23,9 +23,9 @@ function Banner() {
 
   return (
     <header className='banner'
-    style={{height: "100vh",width: "100%",backgroundImage: `url(${imageUrl}${movie.backdrop_path})`, backgroundPosition: "center", backgroundSize: "cover"}}
+    style={{width: "100%",backgroundImage: `url(${imageUrl}${movie.backdrop_path})`, backgroundPosition: "center", backgroundSize: "cover", backgroundRepeat:"no-repeat"}}
     >
-        <div className="banner-content">
+        <div className="banner-content container-fluid">
             <h1>{movie.title || movie.name ||movie.Original_name}</h1>
             <div className="banner-buttons">
                 <button className="button">Play</button>

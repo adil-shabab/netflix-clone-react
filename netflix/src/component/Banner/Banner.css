@@ -1,6 +1,7 @@
 .banner-content{
     color: white;
-    padding-top: 100px;
+    padding-top: 7.4rem;
+    font-family: sans-serif;
 }
 
 .banner-fade{
@@ -17,4 +18,5 @@
 }
 .banner{
     position: relative;
+    height: 70vh;
 }
