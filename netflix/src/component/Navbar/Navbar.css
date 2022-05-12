@@ -1,0 +1,25 @@
+.navbar{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    height: 3rem;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    transition:all 0.6s ease;
+}
+.navbar-black{
+    background-color: #111;
+}
+.navbar .netflix-logo{
+    position: fixed;
+    left: 20px;
+    width: 80px;
+    object-fit: contain;
+}
+.navbar .avatar{
+    position: fixed;
+    right: 20px;
+    width: 35px;
+    object-fit: contain;
+}

@@ -1,6 +1,7 @@
 
 import './App.css'
-import Banner from './component/row/Banner/Banner';
+import Banner from './component/Banner/Banner';
+import Navbar from './component/Navbar/Navbar';
 import Row from './component/row/Row';
 import requests from './requests';
 
@@ -11,6 +12,7 @@ function App() {
 
   return (
     <div>
+      <Navbar/>
       <div>
         <Banner/>
       </div>

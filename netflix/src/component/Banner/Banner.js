@@ -1,6 +1,6 @@
 import React,{useState, useEffect} from 'react'
-import instance from '../../../axios';
-import requests from '../../../requests';
+import instance from '../../axios';
+import requests from '../../requests';
 import './Banner.css'
 
 const imageUrl = 'https://image.tmdb.org/t/p/original'
@@ -36,7 +36,7 @@ function Banner() {
                 {movie.overview}
             </h2>
         </div>
-
+        <div className="banner-fade"/>
         
 
 
