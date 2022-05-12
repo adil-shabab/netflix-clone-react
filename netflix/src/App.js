@@ -10,7 +10,7 @@ function App() {
 
   return (
     <div className="App">
-      <Row title="Netflix Originals" fetchUrl={requests.Originals}/>
+      <Row title="Netflix Originals" fetchUrl={requests.Originals} isLargeRow/>
       <Row title="Trending Now" fetchUrl={requests.Trending}/>
       <Row title="Comedy Movies" fetchUrl={requests.Comedy}/>
       <Row title="Romance Movies" fetchUrl={requests.RomanceMovies}/>

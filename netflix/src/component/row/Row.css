@@ -28,3 +28,9 @@
 {
     display: none;
 }
+.large-poster{
+    max-height: 250px;
+}
+.large-poster:hover{
+    transform: scale(1.1);
+}
