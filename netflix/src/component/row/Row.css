@@ -6,7 +6,7 @@
 
 .row{
     max-width: 100%;
-    overflow-x: auto;
+    overflow-x: scroll;
     overflow-y: hidden;
 }
 .poster{
