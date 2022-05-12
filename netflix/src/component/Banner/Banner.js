@@ -25,14 +25,14 @@ function Banner() {
     <header className='banner'
     style={{width: "100%",backgroundImage: `url(${imageUrl}${movie.backdrop_path})`, backgroundPosition: "center", backgroundSize: "cover", backgroundRepeat:"no-repeat"}}
     >
-        <div className="banner-content container-fluid">
+        <div className="banner-content col-sm-12 col-md-12 col-lg-5">
             <h1>{movie.title || movie.name ||movie.Original_name}</h1>
             <div className="banner-buttons mt-3">
                 <button className="button btn mr-2"><i class="fa-solid fa-play"></i>   Play</button>
                 <button className="button btn"><i class="fa-solid fa-bookmark"></i>   My List</button>
             </div>
 
-            <p className="banner-description mt-4">
+            <p className="banner-description mt-4 text-justify">
                 {movie.overview}
             </p>
         </div>

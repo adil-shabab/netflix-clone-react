@@ -33,3 +33,11 @@
 .button:hover{
     background: red;
 }
+.banner-content p{
+    font-size: 1.1rem;
+    max-height: 150px;
+    overflow: scroll;
+}
+.banner-content p::-webkit-scrollbar{
+    display: none;
+}
