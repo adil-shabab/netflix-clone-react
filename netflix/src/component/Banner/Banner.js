@@ -27,14 +27,14 @@ function Banner() {
     >
         <div className="banner-content container-fluid">
             <h1>{movie.title || movie.name ||movie.Original_name}</h1>
-            <div className="banner-buttons">
-                <button className="button">Play</button>
-                <button className="button">My List</button>
+            <div className="banner-buttons mt-3">
+                <button className="button btn mr-2"><i class="fa-solid fa-play"></i>   Play</button>
+                <button className="button btn"><i class="fa-solid fa-bookmark"></i>   My List</button>
             </div>
 
-            <h2 className="banner-description">
+            <p className="banner-description mt-4">
                 {movie.overview}
-            </h2>
+            </p>
         </div>
         <div className="banner-fade"/>
         

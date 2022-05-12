@@ -3,6 +3,10 @@
     padding-top: 7.4rem;
     font-family: sans-serif;
 }
+.banner-content h1{
+    font-size: 2.5rem;
+    font-weight: 900;
+}
 
 .banner-fade{
     height: 7.4rem;
@@ -19,4 +23,13 @@
 .banner{
     position: relative;
     height: 70vh;
+}
+.button{
+    background: #111;
+    border: black;
+    color: white;
+    transition: 0.5s ease;
+}
+.button:hover{
+    background: red;
 }
