@@ -1,5 +1,6 @@
 
 import './App.css'
+import Banner from './component/row/Banner/Banner';
 import Row from './component/row/Row';
 import requests from './requests';
 
@@ -9,7 +10,11 @@ import requests from './requests';
 function App() {
 
   return (
-    <div className="App">
+    <div>
+      <div>
+        <Banner/>
+      </div>
+      <div className="App">
       <Row title="Netflix Originals" fetchUrl={requests.Originals} isLargeRow/>
       <Row title="Trending Now" fetchUrl={requests.Trending}/>
       <Row title="Comedy Movies" fetchUrl={requests.Comedy}/>
@@ -17,6 +22,7 @@ function App() {
       <Row title="Action Movies" fetchUrl={requests.Action}/>
       <Row title="Horror Movies" fetchUrl={requests.HorrorMovies}/>
       <Row title="Documentaries" fetchUrl={requests.Documentaries}/>
+    </div>
     </div>
   );
 }
