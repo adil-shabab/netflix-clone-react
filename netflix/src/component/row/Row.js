@@ -47,15 +47,15 @@ function Row({ title, fetchUrl, isLargeRow }) {
   // console.log(movies);
 
   return (
-    <div className="row">
-      <h2>{title}</h2>
+    <div className="row container-fluid pb-3">
+      <h3 className="text-white ml-4 ">{title}</h3>
       <div className="row_poster">
         {movies.map((movie) => {
           return (
             <img
               key={movie.id}
               onClick={()=> handleClick(movie)}
-              className={`poster ${isLargeRow && "large-poster"}`}
+              className={`poster ml-2 ${isLargeRow && "large-poster"}`}
               src={`${imageBaseUrl}${isLargeRow ? movie.poster_path : movie.backdrop_path}`}
               alt={movie.name}
             />

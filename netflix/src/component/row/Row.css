@@ -6,12 +6,12 @@
 
 .row{
     max-width: 100%;
-    overflow-x: scroll;
-    overflow-y: visible;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 .poster{
     object-fit: contain;
-    max-height: 100px;
+    max-height: 130px;
     width: 100%;
     transition: 0.5s ease;
 }
@@ -33,4 +33,7 @@
 }
 .large-poster:hover{
     transform: scale(1.1);
+}
+.row h3{
+    font-family: sans-serif;
 }
