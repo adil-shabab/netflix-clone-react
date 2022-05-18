@@ -6,7 +6,6 @@
 
 .row{
     max-width: 100%;
-    overflow-x: scroll;
     overflow-y: hidden;
 }
 .poster{
@@ -21,6 +20,7 @@
 .row_poster{
     display: flex;
     width: 100%;
+    overflow-x: scroll;
 }
 .poster::-webkit-scrollbar,
 .row_poster::-webkit-scrollbar,
